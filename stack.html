@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let stack = []
+        let currentVal = stack.length
+        let maxVal = 4
+
+        function push(newVal){
+            if(currentVal>maxVal)
+            {alert("stack is full")}
+            else{
+            stack[currentVal]=newVal
+            currentVal++
+            }
+        }
+
+        function pop()
+        {
+           if(currentVal>0)
+           {
+            currentVal--
+            stack.length=currentVal;
+           }
+           else{
+            alert("stack is empty")
+           }
+        }
+
+        function display(){
+           console.log(stack)
+        }
+        display()
+    </script>
+</body>
+</html>
